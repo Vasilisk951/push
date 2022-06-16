@@ -15,14 +15,14 @@
             if(!('Notification' in window)){
                  alert('Ваш браузер не поддерживает уведомления');
             } else if(Notification.permission ==='granted') {
-                setInterval(notifyMe, 2000);
+                setInterval(notifyMe, 10000);
             } else if(Notification.permission !=='denied'){
                 Notification.requestPermission(function (permission) {
                     if(!('permission') in Notification) {
                         Notification.permission = permission;
                     }
                     if(permission ==="granted") {
-                        setInterval(notifyMe, 2000);
+                        setInterval(notifyMe, 10000);
                     }
                 })
             }
